@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import logoPixabay from '../../assets/images/pixabay-logo.png';
 import './style.css';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as searchImageReducer from '../../reducers/searchImageReducer';
 
-export default class Header extends Component {
+class Header extends Component {
     state = {
         imageSearch: '',
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state.imageSearch);
+        console.log(this.props);
     }
 
     render() {
@@ -24,3 +27,12 @@ export default class Header extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({
+    images: state.images
+});
+
+const mapDispatchToProps = dispatch =>
+    bindActionCreators(searchImageReducer, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
