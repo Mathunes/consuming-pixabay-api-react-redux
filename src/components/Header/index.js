@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logoPixabay from '../../assets/images/pixabay-logo.png';
 import './style.css';
+
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as searchImageReducer from '../../reducers/searchImageReducer';
+import * as searchActions from '../../actions';
 
 class Header extends Component {
     state = {
@@ -12,10 +13,12 @@ class Header extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.props);
+        
+        this.props.searchImage(this.state.imageSearch);
     }
 
     render() {
+
         return (
             <header>
                 <img src={logoPixabay} alt="logo"></img>
@@ -33,6 +36,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch =>
-    bindActionCreators(searchImageReducer, dispatch)
+    bindActionCreators(searchActions, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
