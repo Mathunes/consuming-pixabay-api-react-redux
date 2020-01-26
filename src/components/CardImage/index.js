@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class CardImage extends Component {
 
@@ -11,10 +12,9 @@ export default class CardImage extends Component {
             <div className="container-images">
                 {this.props.imagesData.map((image) => {
                     return (
-                        <img key={image.id} src={image.largeImageURL} alt="Imagem" onClick={() => this.handleClickImage(image)}/>
-                        // <Link to={`image/id=${id}`}>
-                            
-                        // </Link>
+                        <Link to={`image/id=${image.id}`}>
+                            <img key={image.id} src={image.largeImageURL} alt="Imagem" onClick={() => this.handleClickImage(image)}/>                            
+                        </Link>
                     )
                 })}
             </div>
