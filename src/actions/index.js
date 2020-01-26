@@ -5,14 +5,14 @@ export function searchImage(image) {
     return dispatch => {
         dispatch(searchImageStarted());
 
-        // api.get(`${image}`)
-        axios.get(`https://pixabay.com/api/?key=12264135-54d086077e5085f21d30d2762&q=${image}`)
-        .then(response => {
-            dispatch(searchImageSuccess(response));
-        })
-        .catch(error => {
-            dispatch(searchImageFailure(error.message));
-        })
+        axios
+            .get(`https://pixabay.com/api/?key=12264135-54d086077e5085f21d30d2762&q=${image}`)
+            .then(response => {
+                dispatch(searchImageSuccess(response));
+            })
+            .catch(error => {
+                dispatch(searchImageFailure(error.message));
+            })
     }    
 }
 

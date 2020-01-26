@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CardImage from '../CardImage';
+import imageLoading from '../../assets/images/loading.gif';
 
 class Main extends Component {
     
@@ -17,7 +18,7 @@ class Main extends Component {
             }
             
         } else {
-            container = <p>Carregando</p>
+            container = <img src={imageLoading} alt="Carregando" />
         }
 
         return (
