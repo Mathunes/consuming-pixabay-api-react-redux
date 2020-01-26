@@ -1,6 +1,13 @@
 import { api } from "../services/api";
 import axios from 'axios';
 
+export function openImage(imageInfo) {
+    return ({
+        type: 'OPEN_IMAGE',
+        imageInfo
+    });
+}
+
 export function searchImage(image) {
     return dispatch => {
         dispatch(searchImageStarted());
