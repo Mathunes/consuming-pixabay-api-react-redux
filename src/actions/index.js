@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export function searchImage(image) {
+export function searchImage(image) {    
+   
     return dispatch => {
         dispatch(searchImageStarted());
 
