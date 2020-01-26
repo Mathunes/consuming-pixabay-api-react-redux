@@ -7,15 +7,11 @@ class Main extends Component {
     render() {
 
         let container;
+        let { loading, error, found } = this.props.images;
 
-        if (!this.props.images.loading) {
-            if (this.props.images.found) {
-                
-                // container = <p>Encontrado</p>
-                console.log(this.props.images.images.data);
-                
+        if (!loading) {
+            if (found) {
                 container = <CardImage imagesData={this.props.images.images.data.hits} />
-
             } else {
                 container = <p>Não encontrado</p>
             }
@@ -26,7 +22,7 @@ class Main extends Component {
 
         return (
             <main>
-                <div className="container-images">
+                <div className="container">
                     {container}
                 </div>
                 
