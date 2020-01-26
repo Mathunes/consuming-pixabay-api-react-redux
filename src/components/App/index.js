@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../Header';
 import { Provider } from 'react-redux';
 import store from '../../store';
-import Main from '../Main';
+import Main from '../../pages/Main';
 
 function App() {
   return (
