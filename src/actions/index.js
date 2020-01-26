@@ -4,7 +4,7 @@ export function searchImage(image) {
     return dispatch => {
         dispatch(searchImageStarted());
 
-        api.get(`${image}`)
+        api.get(`&q=${image}`)
         .then(response => {
             dispatch(searchImageSuccess(response));
         })
