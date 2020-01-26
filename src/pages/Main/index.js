@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import CardImage from '../CardImage';
+import CardImage from '../../components/CardImage';
 import imageLoading from '../../assets/images/loading.gif';
 
 class Main extends Component {
