@@ -11,6 +11,10 @@ class Header extends Component {
         imageSearch: '',
     }
 
+    componentDidMount() {
+        this.props.searchImage('');
+    }
+
     handleSubmit = (e) => {
         e.preventDefault();
         

@@ -6,7 +6,6 @@ import imageLoading from '../../assets/images/loading.gif';
 class Main extends Component {
     
     render() {
-
         let container;
         let { loading, error, found } = this.props.images;
 
