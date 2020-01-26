@@ -5,10 +5,12 @@ const initialState = {
 export const openImageReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'OPEN_IMAGE':
-            return ({
+            return {
                 imageInfo: action.imageInfo
-            });
+            };
         default:
             return state;
     }
 }
+
+// export openImageReducer;

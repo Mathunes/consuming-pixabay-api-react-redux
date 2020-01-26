@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as openImage from '../../actions';
 
-export default class CardImage extends Component {
+class CardImage extends Component {
 
-    handleClickImage = (e) => {
-        console.log(e.target);
+    handleClickImage = (image) => {
+        this.props.openImage(image);
     }
 
     render() {
@@ -11,10 +14,19 @@ export default class CardImage extends Component {
             <div className="container-images">
                 {this.props.imagesData.map((image) => {
                     return (
-                        <img key={image.id} src={image.largeImageURL} alt="Imagem" onClick={this.handleClickImage}/>
+                        <img key={image.id} src={image.largeImageURL} alt="Imagem" onClick={() => this.handleClickImage(image)}/>
                     )
                 })}
             </div>
         )
     }
 }
+
+const mapStateToProps = state => ({
+    imageData: state.openImage,
+})
+
+const mapDispatchToProps = dispatch =>
+    bindActionCreators(openImage, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(CardImage);
