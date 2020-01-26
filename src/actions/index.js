@@ -1,11 +1,5 @@
 import axios from 'axios';
 
-export function openImage(imageInfo) {
-    return dispatch => {
-        dispatch(openImageSuccess(imageInfo));
-    }
-}
-
 export function searchImage(image) {
     return dispatch => {
         dispatch(searchImageStarted());
@@ -37,9 +31,4 @@ const searchImageFailure = (error) => ({
     payload: {
         error
     }
-})
-
-const openImageSuccess = (imageInfo) => ({
-    type: 'OPEN_IMAGE',
-    imageInfo
 })
