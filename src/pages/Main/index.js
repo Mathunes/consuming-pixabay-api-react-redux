@@ -16,7 +16,9 @@ class Main extends Component {
 
         if (!loading) {
             if (found) {
-                container = <CardImage imagesData={this.props.images.images.data.hits} />
+                (this.props.images.images.data.totalHits) ? 
+                container = <CardImage imagesData={this.props.images.images.data.hits} /> :
+                container = <p>Não encontrado</p>
             } else {
                 container = <p>Não encontrado</p>
             }
