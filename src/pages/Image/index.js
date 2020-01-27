@@ -44,15 +44,28 @@ class Image extends Component {
     render() {
 
         let container;
+
+        console.log(this.state.imageData)
         
         if (this.state.loading) {
-            container = <img src={imageLoading} alt="Carregando" />
+            container = <img src={imageLoading} alt="Carregando" className="image-loading"/>
         } else {
             if (!this.state.error) {
                 if (this.state.imageData.length) {
-                    container = <div className="container-image-open">
+                    container = <div className="container-image">
                         {this.state.imageData.map((image) => (
-                            <img key={image.id} src={image.largeImageURL} alt="Imagem" />
+                            <div className="container-image-open" key={image.id}>
+                                <img src={image.largeImageURL} alt="Imagem" />
+                                <div className="author-info">
+                                    <img src={image.userImageURL} alt="Foto do autor" />
+                                    <p>{image.user}</p>
+                        
+                                    <div className="view">{image.views}</div>
+                                    <div className="likes">{image.likes}</div>
+                                    <div className="favorites">{image.favorites}</div>
+                                    <button>Baixar</button>
+                                </div>
+                            </div>
                         ))}
 
                     </div>    
