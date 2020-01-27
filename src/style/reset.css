@@ -4,3 +4,11 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+*:focus {
+    outline: none;
+}
+
+.image-loading {
+    width: 100px;
+}

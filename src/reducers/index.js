@@ -1,6 +1,6 @@
-import { searchImageReducer } from './searchImageReducer.js';
+import { searchImageReducer as searchImage } from './searchImageReducer.js';
 import { combineReducers } from 'redux';
 
-export const Reducers = combineReducers({
-    searchImageState: searchImageReducer,
-})
+export default combineReducers({
+    searchImage,
+});

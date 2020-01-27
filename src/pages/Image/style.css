@@ -1,0 +1,105 @@
+.container-image-page {
+    padding: 40px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container-image-page a {
+    text-decoration: none;
+    transition: all .2s;
+    color: #444444;
+    position: absolute;
+    left: 40px;
+    top: 20px
+}
+
+.container-image-page a:hover {
+    text-decoration: underline;
+}
+
+.container-image-page .container-image-open img {
+    width: 70%;
+}
+
+.container-image-page .container-image-data {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .container-image-page .container-image-open img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .container-image-page .container-image-data {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .container-image-page .container-image-data .image-data .author-info .profile-author {
+        width: 40px;
+    }
+
+    .container-image-page {
+        padding: 40px 20px;
+    }
+
+    .container-image-page a {
+        font-size: 14px;
+        left: 20px;
+    }
+}
+
+.container-image-page .container-image-data .image-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%
+}
+
+.container-image-page .container-image-data .image-data .author-info {
+    display: flex;
+    align-items: center;
+}
+
+.container-image-page .container-image-data .image-data .author-info * {
+    margin: 0 10px 30px 10px;
+}
+
+.container-image-page .container-image-data .image-data .author-info img {
+    width: 50px;
+    border-radius: 50px;
+}
+
+.container-image-page .container-image-data .image-data .image-info {
+    display: flex;
+    margin-left: 5px;
+}
+
+.container-image-page .container-image-data .image-data .image-info * {
+    margin: 0 5px;
+    background-color: mediumslateblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 5px;
+    box-sizing: initial;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 5px 10px
+}
+
+.container-image-page .container-image-data .image-data .image-info img {
+    width: 15px;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
