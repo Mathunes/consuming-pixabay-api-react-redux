@@ -4,6 +4,10 @@ import imageLoading from '../../assets/images/loading.gif';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions';
+import './style.css';
+import iconView from '../../assets/icons/visibility.png';
+import iconLike from '../../assets/icons/like.png';
+import iconStar from '../../assets/icons/star.png';
 
 class Image extends Component {
 
@@ -52,7 +56,33 @@ class Image extends Component {
                 if (this.state.imageData.length) {
                     container = <div className="container-image-open">
                         {this.state.imageData.map((image) => (
-                            <img key={image.id} src={image.largeImageURL} alt="Imagem" />
+                            <div className="container-image-data" key={image.id}>
+                                <img src={image.largeImageURL} alt="Imagem" />
+
+                                <div className="image-data">
+                                    <div className="author-info">
+                                        <img src={image.userImageURL} alt="Foto do autor" />
+                                        <p>{image.user}</p>
+                                    </div>
+                                    <div className="image-info">
+                                        <div className="view">
+                                            <img src={iconView} alt="Icone olho" />
+                                            {image.views}
+                                        </div>
+                                        <div className="likes">
+                                            <img src={iconLike} alt="Icone curtida" />
+                                            {image.likes}
+                                        </div>
+                                        <div className="favorites">
+                                            <img src={iconStar} alt="Icone estrela" />
+                                            {image.favorites}
+                                        </div>
+
+                                    </div>
+
+                                    {console.log(image)}
+                                </div>
+                            </div>
                         ))}
 
                     </div>    
@@ -62,7 +92,7 @@ class Image extends Component {
         }
 
         return (
-            <div className="container">
+            <div className="container-image-page">
                 {container}
             </div>
         )

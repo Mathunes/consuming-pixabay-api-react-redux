@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logoPixabay from '../../assets/images/pixabay-logo.png';
 import './style.css';
-import searchImage from '../../assets/images/search.png';
+import searchImage from '../../assets/icons/search.png';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as searchActions from '../../actions';
