@@ -81,7 +81,6 @@ class Image extends Component {
 
                                     </div>
 
-                                    {console.log(image)}
                                 </div>
                             </div>
                         ))}

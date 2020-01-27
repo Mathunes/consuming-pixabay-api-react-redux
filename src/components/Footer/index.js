@@ -5,7 +5,7 @@ export default class Footer extends Component {
     render() {
         return (
             <footer>
-                <p>API de imagens disponibilizada pelo <a href="https://pixabay.com/api/docs/" target="_blank">Pixabay</a>.</p>
+                <p>API de imagens disponibilizada pelo <a href="https://pixabay.com/api/docs/" target="_blank" rel="noopener noreferrer">Pixabay</a>.</p>
             </footer>
         )
     }
