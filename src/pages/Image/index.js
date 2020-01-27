@@ -5,6 +5,9 @@ import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions';
 import './style.css';
+import iconLike from '../../assets/icons/like.png';
+import iconFavorite from '../../assets/icons/star.png';
+import iconView from '../../assets/icons/eye.png';
 
 class Image extends Component {
 
@@ -59,16 +62,26 @@ class Image extends Component {
                                 <img src={image.largeImageURL} alt="Imagem" className="image" />
 
                                 <div className="info">
-                                    <div className="author-info">
-                                        <img src={image.userImageURL} alt="Foto do autor" />
-                                        <p>{image.user}</p>
+                                    <div className="line">
+                                        <div className="author-info">
+                                            <img src={image.userImageURL} alt="Foto do autor" />
+                                            <p>{image.user}</p>
+                                        </div>
                                     </div>
                                     <div className="image-info">
-                                        <div className="view">{image.views}</div>
-                                        <div className="likes">{image.likes}</div>
-                                        <div className="favorites">{image.favorites}</div>
+                                        <div className="view">
+                                            <img src={iconView} alt="Icone de olho" />
+                                            <p>{image.views}</p>
+                                        </div>
+                                        <div className="likes">
+                                            <img src={iconLike} alt="Icone de curtida" />
+                                            <p>{image.likes}</p>
+                                        </div>
+                                        <div className="favorites">
+                                            <img src={iconFavorite} alt="Icone de estrela" />
+                                            <p>{image.favorites}</p>
+                                        </div>
                                     </div>
-                                    <button>Baixar</button>
                                 </div>
                             </div>
                         ))}
