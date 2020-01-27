@@ -5,6 +5,7 @@
 .container-image-page a {
     text-decoration: none;
     transition: all .2s;
+    color: #444444;
 }
 
 .container-image-page a:hover {
@@ -18,6 +19,32 @@
 .container-image-page .container-image-data {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .container-image-page .container-image-open img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .container-image-page .container-image-data {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .container-image-page .container-image-data .image-data .author-info .profile-author {
+        width: 40px;
+    }
+
+    .container-image-page {
+        padding: 40px 20px;
+    }
+
+    .container-image-page a {
+        font-size: 14px;
+    }
 }
 
 .container-image-page .container-image-data .image-data {
@@ -57,11 +84,12 @@
     box-sizing: initial;
     border-radius: 50px;
     font-size: 14px;
+    font-weight: bolder;
     padding: 5px 10px
 }
 
 .container-image-page .container-image-data .image-data .image-info img {
     width: 15px;
-    margin: 0;
+    margin: 0 5px 0 0;
     padding: 0;
 }

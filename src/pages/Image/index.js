@@ -62,7 +62,7 @@ class Image extends Component {
 
                                 <div className="image-data">
                                     <div className="author-info">
-                                        <img src={image.userImageURL} alt="Foto do autor" />
+                                        <img src={image.userImageURL} alt="Foto do autor" className="profile-author" />
                                         <p>{image.user}</p>
                                     </div>
                                     <div className="image-info">
