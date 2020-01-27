@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CardImage from '../../components/CardImage';
 import imageLoading from '../../assets/images/loading.gif';
+import { bindActionCreators } from 'redux';
+import * as actions from '../../actions';
 
 class Main extends Component {
   
     render() {
+  
         let container;
-        let { loading, error, found } = this.props.images;
+        let { loading, found } = this.props.images;
 
         if (!loading) {
             if (found) {
@@ -19,7 +22,7 @@ class Main extends Component {
         } else {
             container = <img src={imageLoading} alt="Carregando" />
         }
-
+        
         return (
             <main>
                 <div className="container">
@@ -33,6 +36,9 @@ class Main extends Component {
 
 const mapStateToProps = state => ({
     images: state.searchImage
-});
+})
 
-export default connect(mapStateToProps)(Main);
+const mapDispatchToProps = dispatch =>
+    bindActionCreators(actions, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

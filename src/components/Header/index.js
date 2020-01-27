@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logoPixabay from '../../assets/images/pixabay-logo.png';
 import './style.css';
-
+import searchImage from '../../assets/images/search.png';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as searchActions from '../../actions';
@@ -19,6 +19,7 @@ class Header extends Component {
         e.preventDefault();
         
         this.props.searchImage(this.state.imageSearch);
+
     }
 
     render() {
@@ -27,8 +28,10 @@ class Header extends Component {
             <header>
                 <img src={logoPixabay} alt="logo"></img>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Buscar imagens..." onChange={(e) => {this.setState({imageSearch: e.target.value})}}/>
-                    <button type="submit">Buscar</button>
+                    <button type="submit">
+                        <img src={searchImage} alt="buscar" />
+                    </button>
+                    <input type="text" placeholder="Procurar imagens..." onChange={(e) => {this.setState({imageSearch: e.target.value})}}/>
                 </form>
             </header>
         )

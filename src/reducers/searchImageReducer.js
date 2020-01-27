@@ -2,10 +2,11 @@ const initialState = {
     loading: false,
     images: '',
     error: null,
-    found: false
+    found: false,
 }
 
 export const searchImageReducer = (state = initialState, action) => {
+
     switch (action.type) {
         case 'SEARCH_IMAGE_STARTED':
             return {
@@ -16,18 +17,16 @@ export const searchImageReducer = (state = initialState, action) => {
                 images: action.imagesData,
                 loading: false,
                 error: null,
-                found: true      
+                found: true,    
             }
         case 'SEARCH_IMAGE_FAILURE':
             return {
                 images: action.imagesData,
                 loading: false,
                 error: action.payload.error,
-                found: false
+                found: false,
             }
         default:
             return state;
     }
 }
-
-// export default searchImageReducer;

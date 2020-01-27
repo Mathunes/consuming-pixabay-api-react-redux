@@ -1,9 +1,48 @@
 header {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 20px 40px;
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
 }
 
 header img {
-    width: 100px;
+    width: 120px;
+}
+
+header form {
+    display: flex;
+}
+
+header form input[type = 'text'] {
+    padding: 10px 0;
+    border: 1px solid #c4c4c4;
+    border-radius: 0 5px 5px 0;
+    height: 40px;
+    width: 200px;
+    border-left: none;
+    transition: all .2s;
+}
+
+header form input[type = 'text']:focus {
+    width: 300px;
+}
+
+header form button {
+    background-color: transparent;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px 0 0 5px;
+    padding: 10px;
+    height: 40px;
+    border-right: none;
+}
+
+header form button:hover {
+    cursor: pointer;
+}
+
+header form button img {
+    width: 18px;
 }

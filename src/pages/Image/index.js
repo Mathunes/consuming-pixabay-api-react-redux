@@ -1,19 +1,20 @@
 import React, { Component } from "react";
 import { api } from "../../services/api";
 import imageLoading from '../../assets/images/loading.gif';
-import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
+import { bindActionCreators } from 'redux';
+import * as actions from '../../actions';
 
 class Image extends Component {
 
     state = {
         loading: false,
         imageData: {},
-        error: false
+        error: false,
     }
 
     componentDidMount() {
-
+     
         const {id} = this.props.match.params;
         this.setState({
             loading: true
@@ -37,17 +38,13 @@ class Image extends Component {
                 loading: false
             })
         })
+
     }
 
     render() {
 
         let container;
-
-            
-        setInterval(() => {
-            console.log(this.props)
-        }, 2000);
-
+        
         if (this.state.loading) {
             container = <img src={imageLoading} alt="Carregando" />
         } else {
@@ -72,14 +69,11 @@ class Image extends Component {
     }
 }
 
-// const mapStateToProps = state => {
-//     images: state.searchImage
-// }
-
-// export default connect(mapStateToProps)(image);
-
 const mapStateToProps = state => ({
-    images: state.searchImage
+    images: state.searchImage,
 });
 
-export default connect(mapStateToProps)(Image);
+const mapDispatchToProps = dispatch =>
+    bindActionCreators(actions, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Image);
