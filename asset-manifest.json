@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/consuming-pixabay-api-react-redux/static/css/main.9674902b.chunk.css",
+    "main.css": "/consuming-pixabay-api-react-redux/static/css/main.fbc0203c.chunk.css",
     "main.js": "/consuming-pixabay-api-react-redux/static/js/main.ede4ddcc.chunk.js",
     "main.js.map": "/consuming-pixabay-api-react-redux/static/js/main.ede4ddcc.chunk.js.map",
     "runtime-main.js": "/consuming-pixabay-api-react-redux/static/js/runtime-main.73fb3daa.js",
@@ -8,16 +8,16 @@
     "static/js/2.0a0a945f.chunk.js": "/consuming-pixabay-api-react-redux/static/js/2.0a0a945f.chunk.js",
     "static/js/2.0a0a945f.chunk.js.map": "/consuming-pixabay-api-react-redux/static/js/2.0a0a945f.chunk.js.map",
     "index.html": "/consuming-pixabay-api-react-redux/index.html",
-    "precache-manifest.352fea6c45345cd749652715caea3026.js": "/consuming-pixabay-api-react-redux/precache-manifest.352fea6c45345cd749652715caea3026.js",
+    "precache-manifest.16cabe2a861c3a1a72e2ca7adef62d79.js": "/consuming-pixabay-api-react-redux/precache-manifest.16cabe2a861c3a1a72e2ca7adef62d79.js",
     "service-worker.js": "/consuming-pixabay-api-react-redux/service-worker.js",
-    "static/css/main.9674902b.chunk.css.map": "/consuming-pixabay-api-react-redux/static/css/main.9674902b.chunk.css.map",
+    "static/css/main.fbc0203c.chunk.css.map": "/consuming-pixabay-api-react-redux/static/css/main.fbc0203c.chunk.css.map",
     "static/js/2.0a0a945f.chunk.js.LICENSE": "/consuming-pixabay-api-react-redux/static/js/2.0a0a945f.chunk.js.LICENSE",
     "static/media/loading.gif": "/consuming-pixabay-api-react-redux/static/media/loading.bb23dff2.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.73fb3daa.js",
     "static/js/2.0a0a945f.chunk.js",
-    "static/css/main.9674902b.chunk.css",
+    "static/css/main.fbc0203c.chunk.css",
     "static/js/main.ede4ddcc.chunk.js"
   ]
 }
