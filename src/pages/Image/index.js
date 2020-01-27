@@ -3,6 +3,7 @@ import { api } from "../../services/api";
 import imageLoading from '../../assets/images/loading.gif';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
+import { Link } from 'react-router-dom'
 import * as actions from '../../actions';
 import './style.css';
 import iconView from '../../assets/icons/visibility.png';
@@ -93,6 +94,7 @@ class Image extends Component {
 
         return (
             <div className="container-image-page">
+                <Link to="/">Voltar</Link>
                 {container}
             </div>
         )

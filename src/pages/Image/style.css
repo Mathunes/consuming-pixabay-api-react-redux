@@ -2,6 +2,15 @@
     padding: 40px;
 }
 
+.container-image-page a {
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.container-image-page a:hover {
+    text-decoration: underline;
+}
+
 .container-image-page .container-image-open img {
     width: 70%;
 }
