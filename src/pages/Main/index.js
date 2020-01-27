@@ -4,6 +4,7 @@ import CardImage from '../../components/CardImage';
 import imageLoading from '../../assets/images/loading.gif';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions';
+import './style.css';
 
 class Main extends Component {
   
