@@ -9,7 +9,7 @@ export default class CardImage extends Component {
             <div className="container-images">
                 {this.props.imagesData.map((image) => {
                     return (
-                        <Link key={image.id} to={`image/${image.id}`}>
+                        <Link key={image.id} to={process.env.PUBLIC_URL + `image/${image.id}`}>
                             <img src={image.largeImageURL} alt="Imagem"/>
                         </Link>
                     )

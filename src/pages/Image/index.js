@@ -93,7 +93,7 @@ class Image extends Component {
 
         return (
             <div className="container-image-page">
-                <Link to="/">Voltar</Link>
+                <Link to={process.env.PUBLIC_URL + '/'}>Voltar</Link>
                 {container}
             </div>
         )

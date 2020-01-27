@@ -6,8 +6,8 @@ import Image from '../pages/Image';
 const Routes = () => (
     <BrowserRouter>
         <Switch>
-            <Route exact path="/" component={Main} />
-            <Route path="/image/:id" component={Image} />
+            <Route exact path={process.env.PUBLIC_URL + '/'} component={Main} />
+            <Route path={process.env.PUBLIC_URL + "/image/:id"} component={Image} />
         </Switch>
     </BrowserRouter>
 )
