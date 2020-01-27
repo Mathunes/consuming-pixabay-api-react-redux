@@ -41,6 +41,12 @@ header form input[type = 'text']:focus {
     width: 300px;
 }
 
+@media (max-width: 400px) {
+    header form input[type = 'text']:hover {
+        width: calc(256px - 40px);
+    }
+}
+
 header form button {
     background-color: transparent;
     border: 1px solid #c4c4c4;
