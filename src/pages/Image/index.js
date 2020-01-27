@@ -4,6 +4,7 @@ import imageLoading from '../../assets/images/loading.gif';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions';
+import './style.css';
 
 class Image extends Component {
 
@@ -55,14 +56,18 @@ class Image extends Component {
                     container = <div className="container-image">
                         {this.state.imageData.map((image) => (
                             <div className="container-image-open" key={image.id}>
-                                <img src={image.largeImageURL} alt="Imagem" />
-                                <div className="author-info">
-                                    <img src={image.userImageURL} alt="Foto do autor" />
-                                    <p>{image.user}</p>
-                        
-                                    <div className="view">{image.views}</div>
-                                    <div className="likes">{image.likes}</div>
-                                    <div className="favorites">{image.favorites}</div>
+                                <img src={image.largeImageURL} alt="Imagem" className="image" />
+
+                                <div className="info">
+                                    <div className="author-info">
+                                        <img src={image.userImageURL} alt="Foto do autor" />
+                                        <p>{image.user}</p>
+                                    </div>
+                                    <div className="image-info">
+                                        <div className="view">{image.views}</div>
+                                        <div className="likes">{image.likes}</div>
+                                        <div className="favorites">{image.favorites}</div>
+                                    </div>
                                     <button>Baixar</button>
                                 </div>
                             </div>
