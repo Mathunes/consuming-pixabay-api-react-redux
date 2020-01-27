@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logoPixabay from '../../assets/images/pixabay-logo.png';
 import './style.css';
-import searchImage from '../../assets/icons/search.png';
+import searchImage from '../../assets/images/search.png';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as searchActions from '../../actions';
@@ -26,7 +26,7 @@ class Header extends Component {
 
         return (
             <header>
-                <img src={logoPixabay} alt="logo"></img>
+                <img src={logoPixabay} alt="logo" className="logo-pixabay"></img>
                 <form onSubmit={this.handleSubmit}>
                     <button type="submit">
                         <img src={searchImage} alt="buscar" />

@@ -8,7 +8,17 @@ header {
     position: fixed;
 }
 
-header img {
+@media (max-width: 550px) {
+    header {
+        flex-direction: column;
+    }
+
+    header .logo-pixabay {
+        margin-bottom: 10px;
+    }
+}
+
+header .logo-pixabay {
     width: 120px;
 }
 
