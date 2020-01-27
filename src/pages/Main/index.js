@@ -4,6 +4,7 @@ import CardImage from '../../components/CardImage';
 import imageLoading from '../../assets/images/loading.gif';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions';
+import Header from '../../components/Header';
 import './style.css';
 
 class Main extends Component {
@@ -27,6 +28,7 @@ class Main extends Component {
         return (
             <main>
                 <div className="container">
+                    <Header />
                     {container}
                 </div>
                 
