@@ -21,7 +21,7 @@ class Main extends Component {
             }
             
         } else {
-            container = <img src={imageLoading} alt="Carregando" />
+            container = <img src={imageLoading} alt="Carregando" className="image-loading" />
         }
         
         return (
