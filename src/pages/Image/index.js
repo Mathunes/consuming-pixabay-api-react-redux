@@ -51,7 +51,7 @@ class Image extends Component {
         let container;
         
         if (this.state.loading) {
-            container = <img src={imageLoading} alt="Carregando" />
+            container = <img src={imageLoading} alt="Carregando" className="image-loading" />
         } else {
             if (!this.state.error) {
                 if (this.state.imageData.length) {
