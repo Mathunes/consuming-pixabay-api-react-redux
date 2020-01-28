@@ -28,7 +28,7 @@ class Header extends Component {
             <header>
                 <img src={logoPixabay} alt="logo" className="logo-pixabay"></img>
                 <form onSubmit={this.handleSubmit}>
-                    <button type="submit">
+                    <button type="submit" className="btn-search">
                         <img src={searchImage} alt="buscar" />
                     </button>
                     <input type="text" placeholder="Procurar imagens..." onChange={(e) => {this.setState({imageSearch: e.target.value})}}/>

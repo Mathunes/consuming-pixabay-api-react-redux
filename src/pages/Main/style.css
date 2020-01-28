@@ -11,6 +11,6 @@ main .container {
 
 @media (max-width: 550px) {
     main {
-        padding: 125px 20px;
+        padding: 110px 20px;
     }
 }

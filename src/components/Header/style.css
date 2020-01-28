@@ -42,8 +42,26 @@ header form input[type = 'text']:focus {
 }
 
 @media (max-width: 400px) {
-    header form input[type = 'text']:hover {
-        width: calc(256px - 40px);
+    header .logo-pixabay {
+        width: 110px;
+    }
+
+    header form input[type = 'text'] {
+        height: 30px;
+    }
+
+    header form button.btn-search {
+        height: 30px;
+        padding: 5px 10px;
+        display: flex;
+    }
+
+    header form button.btn-search img {
+        width: 15px;
+    }
+
+    header form input[type = 'text']:focus {
+        width: calc(90vw - 36px);
     }
 }
 
