@@ -8,3 +8,9 @@ main .container {
     align-items: center;
     min-height: calc(100vh - 158px);
 }
+
+@media (max-width: 550px) {
+    main {
+        padding: 125px 20px;
+    }
+}
